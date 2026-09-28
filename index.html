@@ -6,16 +6,32 @@
     <title>DEVORA</title>
     <link rel="stylesheet" href="kode.css">
     <script src="devora.js" defer></script>
+    
 </head>
 <body>
+    <header class="header">
+        <div class="logo">
+            <img src="logo-white.svg" alt="DEVORA Logo">
+        </div>
+
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Navigation menu" aria-expanded="false" aria-controls="navMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+
+        <nav class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#solutions">Решения</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="page-content">
-    <img
-        src="logo-white.svg"
-        alt="DEVORA logo"
-        class="corner-logo"
-        width="585"
-        height="280"
-    >
     <h1 class="hz-eyebrow">Разработка цифровых продуктов для бизнеса</h1>
     <h1 class="It">
         IT, КОТОРОЕ<br>
@@ -32,16 +48,6 @@
         <button class="buttonn" href="#">Наши проект</button>
     </div>
 
-    <ul class="nav-links">
-        <li><a href="#" class="active">Услуги</a></li>
-        <li><a href="#">О нас</a></li>
-        <li><a href="#">Работы</a></li>
-        <li><a href="#">Процесс</a></li>
-        <li><a href="#">Контакты</a></li>
-        <li><a href="#">Вопросы</a></li>
-       
-    </ul>
-
     <img
         src="logo-white.svg"
         alt="DEVORA logo"
@@ -51,7 +57,7 @@
     >
     </div>
 
-    <div class="about">
+    <div class="about" id="about">
         <p class="companu">О КОМПАНИИ</p>
         <h2 class="main-title">Цифровые решения,<br>которые работают на бизнес</h2>
         <div class="about-grid">
@@ -73,7 +79,7 @@
         </div>
     </div>
 
-    <div class="services">
+    <div class="services" id="services">
         <p class="text-ys">УСЛУГИ</p>
         <h1 class="expertises">
             Закрываем весь комплекс задач по разработке,<br>
@@ -124,7 +130,7 @@
         </div>
     </div>
 
-    <section class="process-section">
+    <section class="process-section" id="solutions">
         <p class="section-label">КАК МЫ РАБОТАЕМ</p>
         <h2 class="section-title">От первой мысли до продукта без лишнего шума</h2>
         <p class="section-lead">Фиксируем цель, быстро проверяем идею и превращаем её в систему, которой удобно пользоваться каждый день.</p>
@@ -153,7 +159,7 @@
         </div>
     </section>
 
-    <section class="project-start">
+    <section class="project-start" id="projects">
         <div class="project-start-copy">
             <p class="section-label">ГОТОВЫ НАЧАТЬ</p>
             <h2 class="section-title">Соберём правильный следующий шаг для вашего проекта</h2>
@@ -179,7 +185,7 @@
         </div>
     </section>
 
-    <section class="review-section">
+    <section class="review-section" id="contacts">
         <div class="review-section-copy">
             <p class="section-label">ВАШЕ МНЕНИЕ</p>
             <h2 class="section-title">Оставьте отзыв о работе с DEVORA</h2>

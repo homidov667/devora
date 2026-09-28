@@ -49,3 +49,44 @@ if ('IntersectionObserver' in window) {
 		element.classList.add('is-visible');
 	});
 }
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+  const header = document.querySelector('.header');
+
+  if (!menuToggle || !navMenu) {
+    return;
+  }
+
+  const setMenuOpen = (isOpen) => {
+    menuToggle.classList.toggle('active', isOpen);
+    navMenu.classList.toggle('active', isOpen);
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  };
+
+  menuToggle.addEventListener('click', () => {
+    setMenuOpen(!navMenu.classList.contains('active'));
+  });
+
+  navMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenuOpen(false));
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      setMenuOpen(false);
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    if (navMenu.classList.contains('active') && header && !header.contains(event.target)) {
+      setMenuOpen(false);
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      setMenuOpen(false);
+    }
+  });
+});
