@@ -69,11 +69,11 @@ body {
   display: flex;
   align-items: center;
   position: absolute;
-  top: 15px;
+  top: 25px;
 
   
   position: absolute;
-  left: 150px;
+  left: 50px;
 
   gap: 5px;
 
@@ -927,3 +927,537 @@ font-size: 30px;
   }
 }
 
+/* Responsive layout adjustments: preserve the existing content and visual style. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.about,
+.services,
+.process-section,
+.project-start,
+.review-section {
+  width: min(1200px, calc(100% - 32px));
+}
+
+.about-grid,
+.ramka-grid,
+.process-track,
+.project-start,
+.review-section,
+.form-row {
+  min-width: 0;
+}
+
+.main-title,
+.expertises,
+.section-title,
+.ramka h2,
+.title-container,
+.section-lead,
+.ramka-description,
+.ramka li,
+.project-metric p {
+  overflow-wrap: anywhere;
+}
+
+.brand-logo {
+  height: clamp(96px, 14vw, 180px);
+}
+
+.main-title,
+.section-title {
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+}
+
+@media (max-width: 1024px) {
+  .page-content {
+    min-height: max(760px, 100svh);
+    padding: 100px 24px 136px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .corner-logo {
+    top: 18px;
+    left: 24px;
+    height: clamp(32px, 4vw, 44px);
+  }
+
+  .nav-links {
+    top: 12px;
+    right: 18px;
+    left: auto;
+    width: auto;
+    max-width: calc(100% - 170px);
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 2px;
+  }
+
+  .nav-links a {
+    padding: 10px clamp(6px, 1.2vw, 14px);
+  }
+
+  .hz-eyebrow,
+  .It,
+  .about-us,
+  .actions,
+  .brand-logo {
+    position: static;
+    transform: none;
+  }
+
+  .hz-eyebrow {
+    max-width: 100%;
+    margin: 0;
+    text-align: center;
+    font-size: clamp(1.15rem, 3vw, 1.875rem);
+  }
+
+  .It {
+    max-width: 100%;
+    margin: 0;
+    font-size: clamp(2.5rem, 7vw, 4.0625rem);
+    line-height: 1.12;
+    word-spacing: clamp(2px, 1vw, 10px);
+  }
+
+  .about-us {
+    width: min(760px, 100%);
+    margin: 0;
+    font-size: clamp(0.95rem, 1.5vw, 1rem);
+  }
+
+  .actions {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(12px, 3vw, 32px);
+  }
+
+  .brand-logo {
+    width: auto;
+    max-width: min(70vw, 360px);
+    height: clamp(90px, 14vw, 145px);
+    margin: 0;
+  }
+
+  .about {
+    margin-top: 32px;
+  }
+
+  .services {
+    min-height: auto;
+    padding-top: 1px;
+  }
+
+  .text-ys,
+  .expertises {
+    position: static;
+    margin: 20px clamp(18px, 3vw, 30px) 8px;
+  }
+
+  .expertises {
+    font-size: clamp(1.35rem, 3vw, 1.875rem);
+    line-height: 1.25;
+    letter-spacing: clamp(0px, 0.3vw, 3px);
+  }
+
+  .expertises br {
+    display: none;
+  }
+
+  .ramka-grid {
+    padding: 24px clamp(18px, 3vw, 30px) 30px;
+  }
+
+  .ramka {
+    height: auto;
+    min-height: 260px;
+  }
+
+  .project-start,
+  .review-section,
+  .process-section {
+    padding: clamp(26px, 4vw, 42px) clamp(20px, 3vw, 34px);
+  }
+
+  .project-start {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: clamp(24px, 4vw, 54px);
+  }
+
+  .review-section {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(24px, 4vw, 54px);
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-grid .ramki:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .ramka-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .process-track {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-top: 0;
+  }
+
+  .process-step,
+  .process-step:not(:first-child) {
+    min-height: 150px;
+    padding: 20px 16px 20px 0;
+    border-top: 1px solid #263243;
+  }
+
+  .process-step:nth-child(even) {
+    padding-right: 0;
+    padding-left: 16px;
+    border-right: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-content {
+    min-height: max(780px, 100svh);
+    padding: 112px 18px 28px;
+    gap: 16px;
+  }
+
+  .corner-logo {
+    top: 14px;
+    left: 16px;
+    height: 34px;
+  }
+
+  .nav-links {
+    top: 58px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .nav-links a {
+    padding: 8px clamp(5px, 2vw, 10px);
+    font-size: clamp(0.68rem, 2.8vw, 0.88rem);
+  }
+
+  .hz-eyebrow {
+    font-size: clamp(1rem, 4.5vw, 1.35rem);
+  }
+
+  .It {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
+  .about-us {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .actions {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .button,
+  .buttonn {
+    padding: 11px clamp(12px, 4vw, 22px);
+    font-size: clamp(0.82rem, 3.4vw, 1rem);
+  }
+
+  .brand-logo {
+    max-width: min(62vw, 250px);
+    height: clamp(76px, 24vw, 112px);
+  }
+
+  .about,
+  .services,
+  .process-section,
+  .project-start,
+  .review-section {
+    width: calc(100% - 20px);
+  }
+
+  .about {
+    margin-top: 20px;
+    padding: 18px 16px;
+  }
+
+  .companu,
+  .text-ys,
+  .section-label {
+    letter-spacing: 3px;
+  }
+
+  .main-title,
+  .section-title {
+    font-size: clamp(1.55rem, 7vw, 2rem);
+  }
+
+  .about-grid,
+  .ramka-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .about-grid .ramki:last-child {
+    grid-column: auto;
+  }
+
+  .ramka-grid {
+    padding: 18px 14px 20px;
+  }
+
+  .ramka,
+  .ramki {
+    min-height: 0;
+    padding: 20px;
+  }
+
+  .ramka h2 {
+    font-size: clamp(1.1rem, 5vw, 1.3rem);
+  }
+
+  .process-track {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .process-step,
+  .process-step:not(:first-child) {
+    min-height: auto;
+    padding: 18px 0;
+    border-right: none;
+    border-bottom: 1px solid #263243;
+  }
+
+  .process-step:last-child {
+    border-bottom: none;
+  }
+
+  .project-start,
+  .review-section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    padding: 26px 18px;
+  }
+
+  .review-section::before {
+    left: 18px;
+  }
+
+  .review-form {
+    padding: 18px 14px;
+  }
+
+  .form-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project-metric {
+    grid-template-columns: 38px minmax(0, 1fr);
+    column-gap: 10px;
+  }
+
+  .site-footer {
+    width: calc(100% - 24px);
+    gap: 12px;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Match the reference layout: compact logo in the header and a full hero logo. */
+.page-content {
+  min-height: max(760px, 100svh);
+  padding: 176px 24px 38px;
+  justify-content: flex-start;
+  gap: clamp(12px, 1.7vw, 22px);
+}
+
+.corner-logo {
+  top: 14px;
+  left: 24px;
+  height: 62px;
+  transform: none;
+}
+
+.nav-links {
+  top: 20px;
+  left: 50%;
+  right: auto;
+  width: min(850px, calc(100% - 240px));
+  max-width: 850px;
+  height: 50px;
+  margin: 0;
+  flex-wrap: nowrap;
+  justify-content: center;
+  transform: translateX(-50%);
+}
+
+.nav-links a {
+  padding: 10px clamp(8px, 1vw, 16px);
+}
+
+.hz-eyebrow,
+.It,
+.about-us,
+.actions {
+  position: static;
+  transform: none;
+  margin: 0;
+}
+
+.hz-eyebrow {
+  order: 1;
+}
+
+.brand-logo {
+  display: block;
+  order: 2;
+  width: auto;
+  height: clamp(120px, 14vw, 190px);
+  max-width: min(70vw, 400px);
+  margin: 0;
+}
+
+.It {
+  order: 3;
+  font-size: clamp(3rem, 8vw, 7.5rem);
+  line-height: 1.08;
+  word-spacing: clamp(2px, 1vw, 10px);
+}
+
+.about-us {
+  order: 4;
+  max-width: 900px;
+  font-size: clamp(0.95rem, 1.35vw, 1.1rem);
+}
+
+.actions {
+  order: 5;
+}
+
+@media (max-width: 1024px) {
+  .page-content {
+    padding-top: 164px;
+  }
+
+  .corner-logo {
+    top: 10px;
+    left: 18px;
+    height: 56px;
+  }
+
+  .nav-links {
+    top: 20px;
+    left: 50%;
+    right: auto;
+    width: calc(100% - 160px);
+    height: 50px;
+    flex-wrap: nowrap;
+    transform: translateX(-50%);
+  }
+
+  .brand-logo {
+    height: clamp(112px, 18vw, 170px);
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-links {
+    top: 62px;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    flex-wrap: wrap;
+    transform: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-content {
+    min-height: max(740px, 100svh);
+    padding: 152px 16px 30px;
+    gap: 14px;
+  }
+
+  .corner-logo {
+    top: 8px;
+    left: 14px;
+    height: 50px;
+  }
+
+  .nav-links {
+    top: 58px;
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: center;
+    align-items: center;
+    column-gap: 2px;
+    row-gap: 0;
+  }
+
+  .nav-links a {
+    padding: 7px clamp(5px, 1.8vw, 10px);
+    font-size: clamp(0.68rem, 3vw, 0.88rem);
+  }
+
+  .brand-logo {
+    position: static;
+    order: 2;
+    flex: 0 0 auto;
+    height: clamp(100px, 32vw, 140px);
+    margin: 0;
+    transform: none;
+  }
+
+  .It {
+    position: static;
+    order: 3;
+    width: 100%;
+    font-size: clamp(2.5rem, 10vw, 4rem);
+    transform: none;
+  }
+
+  .hz-eyebrow {
+    position: static;
+    order: 1;
+    margin: 0;
+    transform: none;
+  }
+
+  .about-us {
+    position: static;
+    order: 4;
+    margin: 0;
+    transform: none;
+  }
+
+  .actions {
+    position: static;
+    order: 5;
+    margin: 0;
+    transform: none;
+  }
+}
