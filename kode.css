@@ -1086,18 +1086,21 @@ img {
   }
 
   .hz-eyebrow {
+    order: 1;
     max-width: 100%;
     text-align: center;
     font-size: clamp(1.15rem, 4vw, 1.875rem);
   }
 
   .brand-logo {
+    order: 2;
     width: auto;
     max-width: min(75vw, 360px);
     height: clamp(96px, 22vw, 150px);
   }
 
   .It {
+    order: 3;
     width: 100%;
     max-width: 900px;
     text-align: center;
@@ -1107,12 +1110,14 @@ img {
   }
 
   .about-us {
+    order: 4;
     width: min(760px, 100%);
     font-size: clamp(0.95rem, 2.4vw, 1rem);
     line-height: 1.55;
   }
 
   .actions {
+    order: 5;
     position: static;
     width: 100%;
     justify-content: center;
